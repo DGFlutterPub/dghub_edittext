@@ -41,7 +41,7 @@ class _DefaultEditTextState extends State<DefaultEditText> {
               FilteringTextInputFormatter.deny(RegExp(r'^0+'))
           ],
 
-          maxLines: widget.config.maxLine,
+          maxLines: widget.config.maxLine ?? 1,
           obscuringCharacter: "*",
           controller: widget.config.controller,
           style: TextStyle(
