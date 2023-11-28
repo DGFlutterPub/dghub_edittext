@@ -104,9 +104,8 @@ class _DefaultEditTextState extends State<DefaultEditText> {
                           ? Colors.grey.shade800
                           : Colors.grey)),
               prefixIcon: widget.config.leftWidget,
-              suffixIcon: widget.config.rightWidget == null
-                  ? null
-                  : GestureDetector(
+              suffixIcon: widget.config.isPasswordMode
+                  ? GestureDetector(
                       onTap: widget.config.isPasswordMode
                           ? () => setState(() {
                                 isPasswordModeChanger = !isPasswordModeChanger;
@@ -114,13 +113,12 @@ class _DefaultEditTextState extends State<DefaultEditText> {
                           : null,
                       child: Container(
                           padding: const EdgeInsets.only(left: 5),
-                          child: widget.config.isPasswordMode
-                              ? isPasswordModeChanger
-                                  ? const Icon(Icons.visibility,
-                                      color: Colors.grey, size: 15)
-                                  : const Icon(Icons.visibility_off,
-                                      color: Colors.grey, size: 15)
-                              : widget.config.rightWidget)),
+                          child: isPasswordModeChanger
+                              ? const Icon(Icons.visibility,
+                                  color: Colors.grey, size: 15)
+                              : const Icon(Icons.visibility_off,
+                                  color: Colors.grey, size: 15)))
+                  : widget.config.rightWidget,
               labelText: widget.config.label,
               floatingLabelStyle: TextStyle(color: theme.primaryColor),
               labelStyle: const TextStyle(color: Colors.grey),
