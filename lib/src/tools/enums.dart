@@ -1,1 +1,1 @@
-enum DGHubEditTextType { defaultDesign }
+enum DGHubEditTextType { defaultDesign,card }

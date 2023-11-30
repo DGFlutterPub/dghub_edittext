@@ -102,7 +102,7 @@ class _DefaultEditTextState extends State<DefaultEditText> {
                   borderSide: BorderSide(
                       color: Tools.isDarkTheme(context)
                           ? Colors.grey.shade800
-                          : Colors.grey)),
+                          : Colors.grey.shade400)),
               prefixIcon: widget.config.leftWidget,
               suffixIcon: widget.config.isPasswordMode
                   ? GestureDetector(

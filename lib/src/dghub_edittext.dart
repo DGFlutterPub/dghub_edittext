@@ -3,6 +3,8 @@ import 'package:dghub_edittext/src/edittexts/default_edittext.dart';
 import 'package:dghub_edittext/src/model/edittext_config.dart';
 import 'package:flutter/material.dart';
 
+import 'edittexts/card_edittext.dart';
+
 class DGHubEditText extends StatelessWidget {
   final DGHubEditTextType type;
   final EditTextConfig config;
@@ -14,8 +16,8 @@ class DGHubEditText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (type) {
-      case DGHubEditTextType.defaultDesign:
-        return DefaultEditText(
+      case DGHubEditTextType.card:
+        return CardEditText(
           config: config,
         );
 
