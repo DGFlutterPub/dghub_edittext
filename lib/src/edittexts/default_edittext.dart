@@ -82,19 +82,19 @@ class _DefaultEditTextState extends State<DefaultEditText> {
                 fontSize: 16,
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: theme.primaryColor, width: 1.5),
+                borderSide: BorderSide(color: theme.primaryColor, width: 1.2),
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                   width: 0.8, color:Colors.grey.shade400),
+                   width: 1.2, color:Colors.grey.shade400),
               ),
               disabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                    color: width: 0.8, color:Colors.grey.shade400),
+                  width: 1.2, color:Colors.grey.shade400),
               ),
               border: OutlineInputBorder(
                   borderSide: BorderSide(
-                     width: 0.8, color:Colors.grey.shade400)),
+                     width: 1.2, color:Colors.grey.shade400)),
               prefixIcon: widget.config.leftWidget,
               suffixIcon: widget.config.isPasswordMode
                   ? GestureDetector(
