@@ -1,6 +1,5 @@
 import 'package:dghub_edittext/dghub_edittext.dart';
 import 'package:dghub_edittext/src/edittexts/default_edittext.dart';
-import 'package:dghub_edittext/src/model/edittext_config.dart';
 import 'package:flutter/material.dart';
 
 import 'edittexts/card_edittext.dart';

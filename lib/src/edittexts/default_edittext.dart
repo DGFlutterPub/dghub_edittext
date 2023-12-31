@@ -1,5 +1,4 @@
 import 'package:dghub_edittext/src/model/edittext_config.dart';
-import 'package:dghub_edittext/src/tools/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -44,14 +43,12 @@ class _DefaultEditTextState extends State<DefaultEditText> {
           maxLines: widget.config.maxLine ?? 1,
           obscuringCharacter: "*",
           controller: widget.config.controller,
-          style: TextStyle(
-              color: Tools.isDarkTheme(context) ? Colors.white : Colors.black,
-              fontSize: 16),
+       
           // obscureText: true,
           decoration: InputDecoration(
               prefixIconConstraints: const BoxConstraints(),
               prefixStyle: TextStyle(
-                  fontSize: 16,
+                  fontSize: 12,
                   color:
                       Tools.isDarkTheme(context) ? Colors.white : Colors.black),
               contentPadding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
@@ -79,22 +76,20 @@ class _DefaultEditTextState extends State<DefaultEditText> {
               errorStyle: TextStyle(
                 color: Colors.red[400],
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 12,
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: theme.primaryColor, width: 1.2),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                   width: 1.2, color:Colors.grey.shade400),
+                borderSide: BorderSide(width: 1.2, color: Colors.grey.shade400),
               ),
               disabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  width: 1.2, color:Colors.grey.shade400),
+                borderSide: BorderSide(width: 1.2, color: Colors.grey.shade400),
               ),
               border: OutlineInputBorder(
-                  borderSide: BorderSide(
-                     width: 1.2, color:Colors.grey.shade400)),
+                  borderSide:
+                      BorderSide(width: 1.2, color: Colors.grey.shade400)),
               prefixIcon: widget.config.leftWidget,
               suffixIcon: widget.config.isPasswordMode
                   ? GestureDetector(
@@ -111,10 +106,10 @@ class _DefaultEditTextState extends State<DefaultEditText> {
                               : const Icon(Icons.visibility_off,
                                   color: Colors.grey, size: 15)))
                   : widget.config.rightWidget,
-              labelText: widget.config.label,
+              labelText: widget.config.label ?? widget.config.hint,
               floatingLabelStyle: TextStyle(color: theme.primaryColor),
-              labelStyle: const TextStyle(color: Colors.grey),
-              hintStyle: const TextStyle(fontSize: 16.0, color: Colors.grey),
+              labelStyle: const TextStyle(fontSize: 12, color: Colors.grey),
+              hintStyle: const TextStyle(fontSize: 12.0, color: Colors.grey),
               hintText: widget.config.hint),
         ),
       ),

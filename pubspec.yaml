@@ -1,10 +1,12 @@
 name: dghub_edittext
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: Min Thant Htet.
+version: 0.0.5
+homepage: https://pub.dghub.in
+repository: https://github.com/DGFlutterPub/dghub_edittext
+issue_tracker: https://github.com/DGFlutterPub/dghub_edittext/issues
 
 environment:
-  sdk: '>=3.2.0 <4.0.0'
+  sdk: ">=3.2.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:

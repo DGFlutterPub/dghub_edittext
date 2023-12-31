@@ -31,7 +31,7 @@ class _CardEditTextState extends State<CardEditText> {
         borderRadius: BorderRadius.circular(10),
         onTap: widget.config.onTap,
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(borderR),
               color: theme.cardColor),
@@ -41,7 +41,8 @@ class _CardEditTextState extends State<CardEditText> {
             children: [
               Text(
                 widget.config.label ?? widget.config.hint,
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               TextField(
                 obscureText: isPasswordModeChanger,
@@ -105,7 +106,7 @@ class _CardEditTextState extends State<CardEditText> {
                     disabledBorder: InputBorder.none,
                     border: InputBorder.none,
                     prefixIcon: Container(
-                        margin: EdgeInsets.only(right: 10),
+                        margin: const EdgeInsets.only(right: 10),
                         child: widget.config.leftWidget),
                     suffixIcon: widget.config.isPasswordMode
                         ? GestureDetector(
