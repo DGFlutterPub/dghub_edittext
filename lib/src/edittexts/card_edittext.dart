@@ -1,5 +1,4 @@
 import 'package:dghub_edittext/src/model/edittext_config.dart';
-import 'package:dghub_edittext/src/tools/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -61,19 +60,15 @@ class _CardEditTextState extends State<CardEditText> {
                 maxLines: widget.config.maxLine ?? 1,
                 obscuringCharacter: "*",
                 controller: widget.config.controller,
-                style: TextStyle(
-                    color: Tools.isDarkTheme(context)
-                        ? Colors.white
-                        : Colors.black,
+                style: const TextStyle(
+                  
                     fontSize: 12),
                 // obscureText: true,
                 decoration: InputDecoration(
                     prefixIconConstraints: const BoxConstraints(),
-                    prefixStyle: TextStyle(
+                    prefixStyle: const TextStyle(
                         fontSize: 12,
-                        color: Tools.isDarkTheme(context)
-                            ? Colors.white
-                            : Colors.black),
+                      ),
                     contentPadding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
                     prefix: widget.config.countryCode == null
                         ? null

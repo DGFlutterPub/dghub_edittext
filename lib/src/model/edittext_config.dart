@@ -8,6 +8,7 @@ class EditTextConfig {
   bool isPhoneMode;
   bool isPasswordMode;
   bool isDigitMode;
+  bool isDoubleMode;
   Widget? leftWidget;
   Widget? rightWidget;
   Function()? onTap;
@@ -25,6 +26,7 @@ class EditTextConfig {
       this.isDigitMode = false,
       this.isPasswordMode = false,
       this.isPhoneMode = false,
+      this.isDoubleMode = false,
       this.rightWidget,
       required this.controller,
       this.enabled = true,

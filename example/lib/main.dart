@@ -94,11 +94,11 @@ class _MyHomePageState extends State<MyHomePage> {
           DGHubEditText(
               type: DGHubEditTextType.card,
               config: EditTextConfig(
-                  leftWidget: Icon(
+                  leftWidget: const Icon(
                     Icons.email,
                     size: 15,
                   ),
-                  margin: EdgeInsets.all(30),
+                  margin: const EdgeInsets.all(30),
                   hint: 'Write your email',
                   label: 'Email',
                   controller: TextEditingController())),

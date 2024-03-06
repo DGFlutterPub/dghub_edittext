@@ -30,8 +30,12 @@ class _DefaultEditTextState extends State<DefaultEditText> {
           obscureText: isPasswordModeChanger,
           enabled: widget.config.enabled,
           maxLength: widget.config.maxLength,
-          keyboardType: widget.config.textInputType,
+          keyboardType: widget.config.isDoubleMode
+              ? const TextInputType.numberWithOptions(decimal: true)
+              : widget.config.textInputType,
           inputFormatters: [
+            if (widget.config.isDoubleMode)
+              FilteringTextInputFormatter.allow(RegExp(r'^(\d+)?\.?\d{0,2}')),
             if (widget.config.isDigitMode)
               FilteringTextInputFormatter.digitsOnly,
             if (widget.config.isPhoneMode)
@@ -43,14 +47,13 @@ class _DefaultEditTextState extends State<DefaultEditText> {
           maxLines: widget.config.maxLine ?? 1,
           obscuringCharacter: "*",
           controller: widget.config.controller,
-       
+          style: const TextStyle(fontSize: 12),
           // obscureText: true,
           decoration: InputDecoration(
               prefixIconConstraints: const BoxConstraints(),
-              prefixStyle: TextStyle(
-                  fontSize: 12,
-                  color:
-                      Tools.isDarkTheme(context) ? Colors.white : Colors.black),
+              prefixStyle: const TextStyle(
+                fontSize: 12,
+              ),
               contentPadding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
               prefix: widget.config.countryCode == null
                   ? null
